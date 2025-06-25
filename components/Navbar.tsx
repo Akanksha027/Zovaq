@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,22 +12,17 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   const handleItemClick = (item: string) => {
     setActiveItem(item);
     setIsOpen(false);
     setIsServicesOpen(false);
   };
-
   const services = [
-    { name: 'Influencer & Brand Matchmaking', href: '#' },
-    { name: 'Social Media Management', href: '#' },
+    { name: 'Influencer & Brand Matchmaking', href: '/services/InfluencerMarketing' },
+    { name: 'Social Media Management', href: '/services/SocialMediaMarketing' },
     { name: 'Campaign Strategy & Execution', href: '#' },
     { name: 'Brand Partnerships', href: '#' },
-  
-
   ];
-
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About us', href: '/AboutUs' },
@@ -58,11 +54,10 @@ const Navbar = () => {
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 <motion.button
-                  className={`flex items-center space-x-1 transition-colors relative pb-1 ${
-                    activeItem === item.name
-                      ? 'text-white border-b-2 border-orange-500'
-                      : 'text-gray-300 hover:text-white'
-                  }`}
+                  className={`flex items-center space-x-1 transition-colors relative pb-1 ${activeItem === item.name
+                    ? 'text-white border-b-2 border-orange-500'
+                    : 'text-gray-300 hover:text-white'
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   onClick={() => handleItemClick(item.name)}
@@ -87,21 +82,14 @@ const Navbar = () => {
                     >
                       <div className="py-2">
                         {services.map((service, index) => (
-                          <motion.a
+                          <Link
                             key={service.name}
                             href={service.href}
                             className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-orange-500/10 transition-all duration-200 border-l-2 border-transparent hover:border-orange-500"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.05 }}
-                            whileHover={{ x: 4 }}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              handleItemClick('Services');
-                            }}
+                            onClick={() => handleItemClick('Services')}
                           >
                             {service.name}
-                          </motion.a>
+                          </Link>
                         ))}
                       </div>
                     </motion.div>
@@ -111,22 +99,19 @@ const Navbar = () => {
             ) : (
               <motion.a
                 href={item.href}
-                className={`transition-colors relative pb-1 ${
-                  activeItem === item.name
-                    ? 'text-white border-b-2 border-orange-500'
-                    : 'text-gray-300 hover:text-white'
-                }`}
+                className={`transition-colors relative pb-1 ${activeItem === item.name
+                  ? 'text-white border-b-2 border-orange-500'
+                  : 'text-gray-300 hover:text-white'
+                  }`}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 onClick={(e) => {
                   if (!item.hasDropdown && item.href) {
-                    // Don't prevent navigation for normal links
                     return;
                   }
                   e.preventDefault();
                   handleItemClick(item.name);
                 }}
-                
               >
                 {item.name}
               </motion.a>
@@ -144,7 +129,6 @@ const Navbar = () => {
         Contact us
       </motion.button>
 
-      {/* Mobile menu button */}
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-white focus:outline-none">
           <motion.svg
@@ -160,7 +144,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -174,11 +157,10 @@ const Navbar = () => {
               <div key={item.name}>
                 <motion.a
                   href={item.href}
-                  className={`block px-6 py-3 transition-colors ${
-                    activeItem === item.name
-                      ? 'text-orange-500 bg-orange-500/10'
-                      : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                  }`}
+                  className={`block px-6 py-3 transition-colors ${activeItem === item.name
+                    ? 'text-orange-500 bg-orange-500/10'
+                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                    }`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -203,8 +185,7 @@ const Navbar = () => {
                     )}
                   </div>
                 </motion.a>
-                
-                {/* Mobile Services Dropdown */}
+
                 <AnimatePresence>
                   {item.hasDropdown && isServicesOpen && (
                     <motion.div
@@ -215,27 +196,21 @@ const Navbar = () => {
                       className="bg-gray-800/50"
                     >
                       {services.map((service, serviceIndex) => (
-                        <motion.a
+                        <Link
                           key={service.name}
                           href={service.href}
                           className="block px-12 py-2 text-gray-400 hover:text-white hover:bg-orange-500/10 transition-colors"
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: serviceIndex * 0.05 }}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            handleItemClick('Services');
-                          }}
+                          onClick={() => handleItemClick('Services')}
                         >
                           {service.name}
-                        </motion.a>
+                        </Link>
                       ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ))}
-            
+
             <motion.button
               className="mx-6 mt-4 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-medium transition-colors"
               initial={{ opacity: 0, y: 20 }}

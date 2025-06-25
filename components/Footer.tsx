@@ -1,19 +1,12 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white py-12 px-48">
       <div className="flex flex-col md:flex-row justify-between items-start">
         {/* Logo and Description */}
-        <motion.div
-          className="mb-8 md:mb-0"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="mb-8 md:mb-0">
           <div className="flex items-center">
             <svg
               width="30"
@@ -24,7 +17,7 @@ const Footer: React.FC = () => {
               className="text-orange-500"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 12H11V16H13V12ZM12 11C11.45 11 11 10.55 11 10C11 9.45 11.45 9 12 9C12.55 9 13 9.45 13 10C13 10.55 12.55 11 12 11Z"
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 12 20ZM13 12H11V16H13V12ZM12 11C11.45 11 11 10.55 11 10C11 9.45 11.45 9 12 9C12.55 9 13 9.45 13 10C13 10.55 12.55 11 12 11Z"
                 fill="currentColor"
               />
             </svg>
@@ -79,16 +72,10 @@ const Footer: React.FC = () => {
               </svg>
             </a>
           </div>
-        </motion.div>
+        </div>
 
         {/* Navigation Links */}
-        <motion.div
-          className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
+        <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-16">
           <div>
             <h3 className="text-lg font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
@@ -107,16 +94,10 @@ const Footer: React.FC = () => {
               <li><a href="#" className="text-gray-400 hover:text-orange-500">Terms and privacy</a></li>
             </ul>
           </div>
-        </motion.div>
+        </div>
 
         {/* Newsletter */}
-        <motion.div
-          className="mt-8 md:mt-0"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        <div className="mt-8 md:mt-0">
           <div className="flex flex-col items-end">
             <h3 className="text-lg font-bold mb-2">Newsletter</h3>
             <form className="flex">
@@ -133,7 +114,7 @@ const Footer: React.FC = () => {
               </button>
             </form>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Copyright */}
