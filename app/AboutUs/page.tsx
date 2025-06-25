@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,7 +13,7 @@ interface BeliefCardProps {
   index: number;
 }
 
-const HorizontalLine = () => (
+const HorizontalLine: React.FC = () => (
   <div
     className="
       h-[1.1px] 
@@ -36,7 +36,7 @@ const BeliefCard: React.FC<BeliefCardProps> = ({
   index,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -97,11 +97,10 @@ const BeliefCard: React.FC<BeliefCardProps> = ({
           {description}
         </p>
         <div className="mt-6 flex justify-center">
-  <button className="border border-gray-600 hover:border-gray-400 px-3 py-2 sm:px-4 sm:py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg group">
-    See Details →
-  </button>
-</div>
-
+          <button className="border border-gray-600 hover:border-gray-400 px-3 py-2 sm:px-4 sm:py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg group">
+            See Details →
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -110,6 +109,11 @@ const BeliefCard: React.FC<BeliefCardProps> = ({
 const WhatWeBelieveIn: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Helper function to set section refs
+  const setSectionRef = (index: number) => (el: HTMLDivElement | null) => {
+    sectionRefs.current[index] = el;
+  };
 
   useEffect(() => {
     // Hero animation
@@ -255,7 +259,7 @@ const WhatWeBelieveIn: React.FC = () => {
       <div className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div
-            ref={(el) => (sectionRefs.current[0] = el)}
+            ref={setSectionRef(0)}
             className="text-center mb-12 sm:mb-16 opacity-0"
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500 mb-4 transition-colors duration-300 hover:text-orange-400">
@@ -287,7 +291,7 @@ const WhatWeBelieveIn: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <HorizontalLine />
             <div
-              ref={(el) => (sectionRefs.current[1] = el)}
+              ref={setSectionRef(1)}
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center opacity-0"
             >
               <div>
@@ -312,7 +316,7 @@ const WhatWeBelieveIn: React.FC = () => {
         <div className="py-12 sm:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div
-              ref={(el) => (sectionRefs.current[2] = el)}
+              ref={setSectionRef(2)}
               className="mb-12 sm:mb-16 opacity-0"
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight max-w-full lg:max-w-2xl">
@@ -440,7 +444,7 @@ const WhatWeBelieveIn: React.FC = () => {
         <div className="py-12 sm:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div
-              ref={(el) => (sectionRefs.current[3] = el)}
+              ref={setSectionRef(3)}
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center opacity-0"
             >
               <div>
