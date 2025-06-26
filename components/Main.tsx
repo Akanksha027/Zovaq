@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Main = () => {
   return (
-    <div className="min-h-screen text-white overflow-hidden relative">
+    <div className=" text-white overflow-hidden relative">
       {/* SVG Image in the top right corner */}
       <img
         src="/plane.svg"

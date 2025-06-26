@@ -178,15 +178,7 @@ const SocialMediaPage: React.FC = () => {
 
       <div className="max-w-7xl mx-auto p-6 sm:p-10">
         <section className="flex flex-col md:flex-row items-center text-white">
-          {/* Image Section */}
-          <div className="md:w-1/2 flex justify-end pr-4 sm:pr-10">
-            <img
-              src="/social-media.jpg"
-              alt="YT Shorts Video"
-              className="w-full sm:w-4/5 h-auto object-cover"
-            />
-          </div>
-
+        
           {/* Text Section */}
           <div className="md:w-1/2 p-4 sm:pl-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-4 text-orange-400">
@@ -203,16 +195,26 @@ const SocialMediaPage: React.FC = () => {
               Start Growing Now <span>&rarr;</span>
             </button>
           </div>
+
+            {/* Image Section */}
+            <div className="md:w-1/2 flex justify-end pr-4 sm:pr-10">
+            <img
+              src="/social-media.jpg"
+              alt="YT Shorts Video"
+              className="w-full sm:w-4/5 h-auto object-cover"
+            />
+          </div>
+
         </section>
       </div>
 
-      <div className="text-white py-12 sm:py-16">
+      <div className="text-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center">
             {/* Image Section */}
             <div className="lg:w-1/2 p-4">
               <img
-                src="/service2.png"
+                src="/trust.png"
                 alt="Social Media Illustration"
                 className="w-full h-auto rounded-lg"
               />
@@ -221,7 +223,7 @@ const SocialMediaPage: React.FC = () => {
             {/* Text Section */}
             <div className="lg:w-1/2 p-4 sm:p-8">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-                Why Choose AdLift As Your Social Media Advertising Agency?
+                Why Choose ZOVAQ As Your Social Media Advertising Agency?
               </h2>
 
               <div className="space-y-4">

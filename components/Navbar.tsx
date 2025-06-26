@@ -3,25 +3,36 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
+
+
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('Home');
 
+
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const router = useRouter();
+  const handleContactClick = () => {
+    router.push("/Contact"); // ✅ Call this in an event handler
+  };
+
   const handleItemClick = (item: string) => {
     setActiveItem(item);
     setIsOpen(false);
     setIsServicesOpen(false);
   };
   const services = [
-    { name: 'Influencer & Brand Matchmaking', href: '/services/InfluencerMarketing' },
-    { name: 'Social Media Management', href: '/services/SocialMediaMarketing' },
-    { name: 'Campaign Strategy & Execution', href: '#' },
-    { name: 'Brand Partnerships', href: '#' },
+    { name: 'Influencer Marketing', href: '/services/InfluencerMarketing' },
+    { name: 'Social Media Marketing', href: '/services/SocialMediaMarketing' },
+    { name: 'Brand Awareness', href: '/services/BrandAwareness' },
   ];
   const navItems = [
     { name: 'Home', href: '/' },
@@ -121,13 +132,12 @@ const Navbar = () => {
       </div>
 
       <motion.button
-        className="hidden md:block bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-medium transition-colors"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => handleItemClick('Contact')}
+        className="mx-6 mt-4 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-medium transition-colors"
+        onClick={handleContactClick}
       >
         Contact us
       </motion.button>
+
 
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-white focus:outline-none">
@@ -216,7 +226,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              onClick={() => handleItemClick('Contact')}
+              onClick={() => handleItemClick('/Contact')}
             >
               Contact us
             </motion.button>

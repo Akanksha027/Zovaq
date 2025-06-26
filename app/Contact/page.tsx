@@ -114,8 +114,10 @@ const Contact: React.FC = () => {
                     <option value="I'm a" className="bg-black">I'm a</option>
                     <option value="Business Owner" className="bg-black">Business Owner</option>
                     <option value="Marketing Manager" className="bg-black">Marketing Manager</option>
-                    <option value="Freelancer" className="bg-black">Freelancer</option>
-                    <option value="Student" className="bg-black">Student</option>
+                    
+                    <option value="Marketing Manager" className="bg-black">Influencer</option>
+                    
+                   
                     <option value="Other" className="bg-black">Other</option>
                   </select>
                   <div className="absolute right-0 top-1/2 transform -translate-y-1/2 pointer-events-none">
