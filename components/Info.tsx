@@ -1,17 +1,20 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from "next/navigation";
 
 const Info = () => {
+  const router = useRouter();
+  
   return (
     <div className="text-white py-8 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between">
       {/* Text Content */}
       <motion.div
         className="w-full lg:w-1/2 space-y-4 p-4 sm:p-6 lg:p-8"
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
           WANT TO KNOW MORE?
@@ -29,6 +32,7 @@ const Info = () => {
           className="bg-white text-red-500 font-bold py-2 px-4 sm:py-2 sm:px-5 rounded-lg mt-4 hover:bg-gray-200 transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => router.push("/Contact")}
         >
           CONTACT US
         </motion.button>
@@ -37,10 +41,10 @@ const Info = () => {
       {/* Image */}
       <motion.div
         className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
       >
         <img
           src="/girl.png"

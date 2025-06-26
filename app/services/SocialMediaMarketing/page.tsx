@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
 import { ArrowRight } from "lucide-react";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CAT from "@/components/CAT";
 
 const SocialMediaPage: React.FC = () => {
   const services = [
@@ -40,31 +41,37 @@ const SocialMediaPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* Grid Background with Vanishing Effect */}
+      {/* Background Grid Overlay */}
       <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)
-          `,
-          backgroundSize: "30px 30px",
-          maskImage:
-            "radial-gradient(ellipse 80% 60% at center, black 40%, transparent 80%)",
-          WebkitMaskImage:
-            "radial-gradient(ellipse 80% 60% at center, black 40%, transparent 80%)",
-        }}
-      />
-
+  className="absolute inset-0"
+  style={{
+    backgroundImage: `
+      linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)
+    `,
+    backgroundSize: "90px 90px",
+    maskImage: `
+      radial-gradient(ellipse 80% 60% at center, black 40%, transparent 80%),
+      linear-gradient(to bottom, black 80%, transparent 100%)
+    `,
+    WebkitMaskImage: `
+      radial-gradient(ellipse 80% 60% at center, black 40%, transparent 80%),
+      linear-gradient(to bottom, black 80%, transparent 100%)
+    `,
+    maskComposite: "intersect",
+    WebkitMaskComposite: "source-in",
+  }}
+/>
+ <div className="relative z-10">
       <Navbar />
       <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 flex items-center min-h-screen">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center w-full">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 lg:ml-4">
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight">
                 Looking for a{" "}
-                <span className="bg-orange-500 text-white px-3 sm:px-4 py-2 rounded-lg inline-block">
+                <span className="bg-orange-500 text-white px-2   sm:px-4 py-2 rounded-lg inline-block">
                   Social Media Marketing
                 </span>{" "}
                 Agency That Actually Delivers?
@@ -116,22 +123,6 @@ const SocialMediaPage: React.FC = () => {
       </div>
 
       <div className="min-h-screen bg-black relative overflow-hidden py-12 sm:py-16">
-        {/* Grid Background with Vanishing Effect */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "30px 30px",
-            maskImage:
-              "radial-gradient(ellipse 80% 70% at center, black 30%, transparent 80%)",
-            WebkitMaskImage:
-              "radial-gradient(ellipse 80% 70% at center, black 30%, transparent 80%)",
-          }}
-        />
-
         <div className="relative z-10 container mx-auto px-4 sm:px-6">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16">
@@ -178,17 +169,16 @@ const SocialMediaPage: React.FC = () => {
 
       <div className="max-w-7xl mx-auto p-6 sm:p-10">
         <section className="flex flex-col md:flex-row items-center text-white">
-        
           {/* Text Section */}
           <div className="md:w-1/2 p-4 sm:pl-8">
             <h2 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-4 text-orange-400">
               Social Media Marketing for Small Businesses and Enterprises
             </h2>
             <p className="text-base sm:text-lg mb-6">
-              Whether you’re a neighborhood café or a national brand, our social
+              Whether you're a neighborhood café or a national brand, our social
               media marketing agency for small business and enterprise-level
               solutions are designed for your goals and your budget. And yes,
-              we’re transparent about our social media marketing agency pricing
+              we're transparent about our social media marketing agency pricing
               — because surprises are for birthdays, not invoices.
             </p>
             <button className="text-white text-base sm:text-xl bg-orange-500 rounded-2xl px-3 sm:px-4 py-3 sm:py-4">
@@ -196,15 +186,14 @@ const SocialMediaPage: React.FC = () => {
             </button>
           </div>
 
-            {/* Image Section */}
-            <div className="md:w-1/2 flex justify-end pr-4 sm:pr-10">
+          {/* Image Section */}
+          <div className="md:w-1/2 flex justify-end pr-4 sm:pr-10">
             <img
               src="/social-media.jpg"
               alt="YT Shorts Video"
               className="w-full sm:w-4/5 h-auto object-cover"
             />
           </div>
-
         </section>
       </div>
 
@@ -228,7 +217,9 @@ const SocialMediaPage: React.FC = () => {
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <span className="text-orange-500 mr-2 text-lg sm:text-xl">+</span>
+                  <span className="text-orange-500 mr-2 text-lg sm:text-xl">
+                    +
+                  </span>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">
                       We're Obsessed with Results
@@ -242,7 +233,9 @@ const SocialMediaPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <span className="text-orange-500 mr-2 text-lg sm:text-xl">+</span>
+                  <span className="text-orange-500 mr-2 text-lg sm:text-xl">
+                    +
+                  </span>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">
                       Creative Meets Strategy
@@ -255,7 +248,9 @@ const SocialMediaPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <span className="text-orange-500 mr-2 text-lg sm:text-xl">+</span>
+                  <span className="text-orange-500 mr-2 text-lg sm:text-xl">
+                    +
+                  </span>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">
                       No Jargon, Just Clarity
@@ -268,7 +263,9 @@ const SocialMediaPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <span className="text-orange-500 mr-2 text-lg sm:text-xl">+</span>
+                  <span className="text-orange-500 mr-2 text-lg sm:text-xl">
+                    +
+                  </span>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">
                       Flexible Pricing
@@ -284,42 +281,9 @@ const SocialMediaPage: React.FC = () => {
           </div>
         </div>
       </div>
-
-      <div className="p-6 sm:p-10 text-white flex flex-col items-start space-y-6">
-        <h1 className="text-3xl sm:text-5xl font-light">
-          Get <br /> in Touch
-        </h1>
-        <div className="w-full flex flex-col space-y-3">
-          <div className="flex flex-col space-y-1">
-            <p className="text-sm">
-              Contact AdLift for a 360–degree marketing plan
-            </p>
-            <div className="w-3/4 border-t border-white opacity-50 mt-1"></div>
-          </div>
-          <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-3 md:space-y-0">
-            <input
-              className="bg-white rounded-full text-gray-700 px-3 sm:px-4 py-2 sm:py-3 flex-1 text-sm"
-              placeholder="YOUR NAME"
-              type="text"
-            />
-            <input
-              className="bg-white rounded-full text-gray-700 px-3 sm:px-4 py-2 sm:py-3 flex-1 text-sm"
-              placeholder="YOUR BUSINESS EMAIL"
-              type="email"
-            />
-            <input
-              className="bg-white rounded-full text-gray-700 px-3 sm:px-4 py-2 sm:py-3 flex-1 text-sm"
-              placeholder="YOUR PHONE"
-              type="tel"
-            />
-            <button className="bg-gray-900 rounded-full text-white font-bold px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-center space-x-1 sm:space-x-2 text-sm">
-              GET STARTED
-              <span>✉️</span>
-            </button>
-          </div>
-        </div>
       </div>
 
+      <CAT />
       <Footer />
 
       <style jsx>{`

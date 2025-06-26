@@ -32,11 +32,40 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+  
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Error sending message");
+      }
+  
+      const result = await response.json();
+      alert(result.message || "Your message has been sent successfully!");
+      // Reset form
+      setFormData({
+        fullName: "",
+        city: "",
+        userType: "I'm a",
+        email: "",
+        subject: "",
+        number: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again later.");
+    }
   };
+  
 
   return (
     <div className="min-h-screen flex">

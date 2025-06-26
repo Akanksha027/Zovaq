@@ -85,62 +85,53 @@ const ScrollRevealText: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className=" bg-black text-white overflow-hidden">
       <div className="flex items-center justify-center"></div>
 
       <div ref={containerRef} className="min-h-screen flex items-center justify-center px-4 py-10 md:py-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="space-y-4 md:space-y-6 lg:space-y-8">
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.02, 0)}>FROM</span>
-              <div className="relative w-12 h-16 md:w-16 md:h-20 lg:w-20 lg:h-24 xl:w-24 xl:h-28 rounded-xl overflow-hidden mx-1" style={getImageStyle(0.02, 0.01)}>
-                <Image src={profileImages[0]} alt="Athlete" width={200} height={250} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 mix-blend-overlay"></div>
-              </div>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.04, 0.02)}>ATHLETES</span>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.04, 0.02)}>+</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.02, 0)}>FROM</span>
+          
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.04, 0.02)}>EMERGING</span>
+           
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.08, 0.04)}>CELEBRITIES</span>
-              <div className="relative w-12 h-16 md:w-16 md:h-20 lg:w-20 lg:h-24 xl:w-24 xl:h-28 rounded-xl overflow-hidden mx-1" style={getImageStyle(0.08, 0.05)}>
-                <Image src={profileImages[1]} alt="Celebrity" width={200} height={250} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/30 to-yellow-500/30 mix-blend-overlay"></div>
-              </div>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.12, 0.06)}>TO</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.08, 0.04)}>CREATORS</span>
+             
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.12, 0.06)}>TO</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.16, 0.08)}>SOCIAL</span>
-              <div className="relative w-12 h-16 md:w-16 md:h-20 lg:w-20 lg:h-24 xl:w-24 xl:h-28 rounded-xl overflow-hidden mx-1" style={getImageStyle(0.16, 0.09)}>
-                <Image src={profileImages[2]} alt="Social Media Star" width={200} height={250} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/30 to-red-500/30 mix-blend-overlay"></div>
-              </div>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.20, 0.10)}>MEDIA</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.16, 0.08)}> TRUSTED</span>
+          
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.20, 0.10)}>INFLUENCERS</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.24, 0.12)}>STARS,</span>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.28, 0.14)}>WE</span>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.32, 0.16)}>SELECT</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.24, 0.12)}>WE</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.28, 0.14)}>PARTNER </span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.32, 0.16)}>WITH </span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.36, 0.18)}>THE</span>
-              <span className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight italic decoration-white/40 ${greatVibes.className}`} style={{ ...getTextStyle(0.40, 0.20), backgroundClip: 'text' }}>MOST</span>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.44, 0.22)}>AUTHENTIC</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.36, 0.18)}>THE</span>
+              <span className={`text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight italic decoration-white/40 ${greatVibes.className}`} style={{ ...getTextStyle(0.40, 0.20), backgroundClip: 'text' }}>RIGHT</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.44, 0.22)}>VOICES </span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.46, 0.24)}>VOICES</span>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.48, 0.26)}>TO</span>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.50, 0.28)}>PARTNER</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.46, 0.24)}>TO </span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.48, 0.26)}>HELP </span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.50, 0.28)}>YOUR</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.52, 0.30)}>WITH</span>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.52, 0.30)}>YOUR</span>
-              <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.54, 0.30)}>BRAND</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.52, 0.30)}>BRAND </span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.52, 0.30)}>GROW</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.54, 0.30)}>.</span>
             </div>
           </div>
         </div>

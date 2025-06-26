@@ -73,7 +73,30 @@ const InfluencerMarketingPage: React.FC = () => {
 
   return (
 
-    <div className="min-h-screen  text-white">
+    <div className="min-h-screen text-white relative">
+    {/* Background Grid Overlay */}
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
+          `,
+          backgroundSize: "90px 90px", // making the boxes larger
+          maskImage: `
+            radial-gradient(ellipse 80% 60% at center, black 40%, transparent 80%),
+            linear-gradient(to bottom, black 60%, transparent 100%)
+          `,
+          WebkitMaskImage: `
+            radial-gradient(ellipse 80% 60% at center, black 40%, transparent 80%),
+            linear-gradient(to bottom, black 60%, transparent 100%)
+          `,
+          maskComposite: "intersect",
+          WebkitMaskComposite: "source-in",
+      }}
+    />
+ <div className="relative z-10">
+      
       <Navbar/>
       <div className="flex ">
 
@@ -303,6 +326,7 @@ const InfluencerMarketingPage: React.FC = () => {
           <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse delay-225"></div>
           <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse delay-300"></div>
         </div>
+      </div>
       </div>
 
 <Footer/>
