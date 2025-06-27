@@ -4,11 +4,14 @@ import { ArrowRight } from "lucide-react";
 import { InView } from "react-intersection-observer";
 import Link from "next/link";
 import Image from "next/image";
+
 const Main = () => {
   return (
     <div className=" text-white overflow-hidden  relative">
       {/* SVG Image in the top right corner */}
-      <Image width={200} height={200}
+      <Image
+        width={200}
+        height={200}
         src="/plane.svg"
         alt="Plane"
         className="absolute top-4 right-4 w-20 h-20 sm:w-28 sm:h-28 md:w-48 md:h-48 lg:w-38 lg:h-38 animate-pulse"
@@ -69,10 +72,10 @@ const Main = () => {
                   </button>
                 </Link>
                 <Link href="/HowItWorks">
-                <button className="border border-gray-600 hover:border-gray-400 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg group">
-                  See how it works 
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
+                  <button className="border border-gray-600 hover:border-gray-400 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg group">
+                    See how it works
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </button>
                 </Link>
               </div>
             )}
@@ -106,9 +109,9 @@ const Main = () => {
                 {[
                   { number: "60k+", label: "Clients" },
                   { number: "40k+", label: "Satisfied" },
-                  { number: "20k+", label: "Influencers" }
+                  { number: "20k+", label: "Influencers" },
                 ].map((stat, index) => (
-                  <div 
+                  <div
                     key={stat.label}
                     className={`transition-all duration-300 hover:scale-110 ${
                       inView ? `animate-fade-in-up` : ""
@@ -128,7 +131,7 @@ const Main = () => {
 
         {/* Right Content - Image Grid */}
         <div className="flex-1 px-4 max-w-2xl">
-          <div className="grid grid-cols-3 grid-rows-3 gap-1 h-full w-full max-w-[600px] mx-auto">
+          <div className="grid grid-cols-3 grid-rows-3 gap-2 sm:gap-2 h-full w-full max-w-[600px] mx-auto ">
             {[...Array(9)].map((_, index) => (
               <InView key={index} threshold={0.2} triggerOnce>
                 {({ inView, ref }) => (
@@ -136,18 +139,25 @@ const Main = () => {
                     ref={ref}
                     className={`rounded-${
                       index % 3 === 0 ? "full" : "lg"
-                    } overflow-hidden h-48 w-48 transition-all duration-500 ease-out hover:scale-105 hover:shadow-xl cursor-pointer ${
+                    } overflow-hidden 
+                  h-28 w-28        // base (for phones) → 128px
+sm:h-36 sm:w-36   // small screens and up
+md:h-40 md:w-40
+lg:h-44 lg:w-44
+xl:h-48 xl:w-48
+                    transition-all duration-500 ease-out hover:scale-105 hover:shadow-xl cursor-pointer ${
                       inView
                         ? "opacity-100 translate-y-0 rotate-0"
                         : "opacity-0 translate-y-6 -rotate-3"
                     }`}
-                    style={{ 
+                    style={{
                       transitionDelay: `${index * 100}ms`,
-                      transformOrigin: "center"
+                      transformOrigin: "center",
                     }}
                   >
                     <Image
-                    width={200} height={200}
+                      width={200}
+                      height={200}
                       src={`/i${index + 2}.jpg`}
                       alt={`Influencer ${index + 1}`}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
@@ -171,7 +181,7 @@ const Main = () => {
             transform: translateY(0);
           }
         }
-        
+
         .animate-fade-in-up {
           animation: fade-in-up 0.6s ease-out forwards;
           opacity: 0;
