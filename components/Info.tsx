@@ -66,7 +66,7 @@ const Info: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          THERE&apos;S A CHTRBOX IN ALL OF US.
+          THERE&apos;S A MIC DROPPER IN ALL OF US.
         </motion.h3>
         
         <motion.p 
@@ -75,7 +75,13 @@ const Info: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          We&apos;re a bunch of experienced entrepreneurs, marketeers & tech geeks who believe that we can better the way marketing is done on the biggest social media platforms. We believe the power (including a chunk of monetization) of social media must lie with the people. We believe that the future lies in the beautiful blend of technology & people, and we&apos;re here to make it happen with you.
+          Want to know more? Let us take you behind the scenes of what makes ZOVAQ truly different. 
+  Our work is more than campaigns—it&apos;s carefully crafted experiences that speak to your audience, 
+  stir emotion, and drive real engagement. From bold branding to influencer strategies and viral content, 
+  every move we make is backed by purpose, creativity, and data. We believe that every brand has a voice— 
+  and at ZOVAQ, we amplify it loud and clear. Because at the core of every connection lies a story waiting 
+  to be told. And guess what? There&apos;s a Talkaholic in all of us—ready to spark conversations, create impact, 
+  and shape the culture. All you have to do is join the dialogue.
         </motion.p>
         
         <motion.p 

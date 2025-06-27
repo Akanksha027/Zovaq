@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 const AboutUsSection: React.FC = () => {
   return (
     <section className="relative text-white p-8 lg:p-16 overflow-hidden">
@@ -52,9 +53,13 @@ const AboutUsSection: React.FC = () => {
             </div>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
-              We have a proven record of successful influencer marketing campaigns and we know how to make any influencer campaign work. Our process is simple and effective and our team is passionate and looking to bring your company to the next level.
+            ZOVAQ isn&apos;t just another marketing agency—we&apos;re the fresh wave redefining how brands connect. 
+  Born from bold ideas and powered by next-gen strategies, we craft campaigns that resonate, 
+  convert, and lead. Our approach blends creativity with cutting-edge tech to deliver impact 
+  that feels new, exciting, and unforgettable. Step into the future of brand elevation with ZOVAQ.
             </p>
 
+           <Link href='/AboutUs'>
             <button className="group flex items-center gap-3 bg-transparent border border-orange-400 text-orange-400 px-6 py-3 rounded-lg hover:bg-orange-400 hover:text-white transition-all duration-300">
               <span className="font-medium">Know more</span>
               <svg
@@ -66,6 +71,7 @@ const AboutUsSection: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
+            </Link>
           </div>
 
           {/* Right Content - Image Grid */}
@@ -77,17 +83,17 @@ const AboutUsSection: React.FC = () => {
             <div className="grid grid-cols-12 grid-rows-8 gap-4 h-96">
               {/* Top left image */}
               <div className="col-span-7 col-start-1 row-span-4 row-start-1 rounded-2xl overflow-hidden">
-                <Image src="/i5.jpg" alt="Team Collaboration" className="w-full h-full object-cover" />
+                <Image src="/pg1.jpg" alt="Team Collaboration" className="w-full h-full object-cover" />
               </div>
 
               {/* Top right image */}
               <div className="col-span-5 col-start-8 row-span-4 row-start-1 rounded-2xl overflow-hidden">
-                <Image src="/i6.jpg" alt="Team Collaboration" className="w-full h-full object-cover" />
+                <Image src="/pg3.jpg" alt="Team Collaboration" className="w-full h-full object-cover" />
               </div>
 
               {/* Bottom image */}
               <div className="col-span-12 col-start-1 row-span-4 row-start-5 rounded-2xl overflow-hidden">
-                <Image src="/i7.jpg" alt="Innovation & Growth" className="w-full h-full object-cover" />
+                <Image src="/pg2.jpg" alt="Innovation & Growth" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

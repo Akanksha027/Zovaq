@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 interface BeliefCardProps {
   imageSrc: string;
@@ -80,7 +79,7 @@ const BeliefCard: React.FC<BeliefCardProps> = ({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          fill
+       
           className="object-cover transition-transform duration-700 hover:scale-110"
         />
       </div>
@@ -96,11 +95,7 @@ const BeliefCard: React.FC<BeliefCardProps> = ({
         <p className="text-white text-xs sm:text-sm leading-relaxed">
           {description}
         </p>
-        <div className="mt-6 flex justify-center">
-          <button className="border border-gray-600 hover:border-gray-400 px-3 py-2 sm:px-4 sm:py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg group">
-            See Details →
-          </button>
-        </div>
+       
       </div>
     </div>
   );
@@ -142,15 +137,15 @@ const WhatWeBelieveIn: React.FC = () => {
 
   const beliefs: BeliefCardProps[] = [
     {
-      imageSrc: "/i4.jpg",
+      imageSrc: "/innovation1.jpg",
       imageAlt: "Modern workspace with laptop and coffee",
       title: "Innovation Through Technology",
       description:
-        "Over the years at ZOVAQ, we've put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and drive our passion for connecting brands with authentic voices in the digital landscape.",
+        "Over the years at ZOVAQ, we&apos;ve put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and drive our passion for connecting brands with authentic voices in the digital landscape.",
       index: 0,
     },
     {
-      imageSrc: "/i3.jpg",
+      imageSrc: "/innovation2.jpg",
       imageAlt: "Professional business meeting and collaboration",
       title: "Collaborative Excellence",
       description:
@@ -158,11 +153,11 @@ const WhatWeBelieveIn: React.FC = () => {
       index: 1,
     },
     {
-      imageSrc: "/i2.jpg",
+      imageSrc: "/innovation3.jpg",
       imageAlt: "Creative professional working in modern office",
       title: "Authentic Storytelling",
       description:
-        "At our core, we understand that every brand has a unique story to tell. We're dedicated to helping you find the right voice, the right audience, and the right moment to share your message in a way that resonates and creates lasting impact.",
+        "At our core, we understand that every brand has a unique story to tell. We&apos;re dedicated to helping you find the right voice, the right audience, and the right moment to share your message in a way that resonates and creates lasting impact.",
       index: 2,
     },
   ];
@@ -246,7 +241,7 @@ const WhatWeBelieveIn: React.FC = () => {
                 voice and influencers build long‑lasting connections with their
                 audience. We believe in the power of authentic marketing —
                 making sure every campaign is tailored, every partnership is
-                genuine, and every result delivers value. Together, we're
+                genuine, and every result delivers value. Together, we&apos;re
                 shaping the future of digital influence, one collaboration at a
                 time.
               </p>
@@ -266,7 +261,7 @@ const WhatWeBelieveIn: React.FC = () => {
               What we believe in
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-white max-w-3xl mx-auto">
-              Over the years at ZOVAQ, we've put a lot of thought into what it
+              Over the years at ZOVAQ, we&apos;ve put a lot of thought into what it
               is that makes us who we are. The qualities that unite us, that
               make us such an effective team, and drive our success.
             </p>
@@ -312,173 +307,11 @@ const WhatWeBelieveIn: React.FC = () => {
           </div>
         </div>
 
-        {/* Meet Our Team Section */}
-        <div className="py-12 sm:py-16 lg:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div
-              ref={setSectionRef(2)}
-              className="mb-12 sm:mb-16 opacity-0"
-            >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight max-w-full lg:max-w-2xl">
-                Meet our team of creators, designers, and world-class problem
-                solvers
-              </h2>
-              <p className="text-base sm:text-lg text-white max-w-full lg:max-w-xl">
-                "To become the company that customers want, it takes a group of
-                passionate people. Get to know the people who lead"
-              </p>
-            </div>
+       
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-              {/* Team Member 1 */}
-              <div className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 rounded-lg hover:scale-105 transform">
-                <div
-                  className="relative h-64 sm:h-80 lg:h-96"
-                  style={{
-                    backgroundImage: "url(/profile.jpg)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                />
-                <div className="p-4 sm:p-6">
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div>
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
-                        Akanksha Singh
-                      </h3>
-                      <p className="text-white text-sm sm:text-base">
-                        Founder CEO
-                      </p>
-                    </div>
-                    <div className="flex space-x-3 sm:space-x-4 text-lg sm:text-xl text-white">
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaInstagram />
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaLinkedin />
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaEnvelope />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+ 
 
-              {/* Team Member 2 */}
-              <div className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 rounded-lg hover:scale-105 transform">
-                <div
-                  className="relative h-64 sm:h-80 lg:h-96"
-                  style={{
-                    backgroundImage: "url(/i7.jpg)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                />
-                <div className="p-4 sm:p-6">
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-bold text-white">
-                        Roger Dzawin
-                      </h3>
-                      <p className="text-white text-xs sm:text-sm">
-                        Chief Technology Officer
-                      </p>
-                    </div>
-                    <div className="flex space-x-3 sm:space-x-4 text-lg sm:text-xl text-white">
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaInstagram />
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaLinkedin />
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaEnvelope />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Team Member 3 */}
-              <div className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 rounded-lg hover:scale-105 transform">
-                <div
-                  className="relative h-64 sm:h-80 lg:h-96"
-                  style={{
-                    backgroundImage: "url(/i7.jpg)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                />
-                <div className="p-4 sm:p-6">
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-bold text-white">
-                        Roger Dzawin
-                      </h3>
-                      <p className="text-white text-xs sm:text-sm">
-                        Chief Technology Officer
-                      </p>
-                    </div>
-                    <div className="flex space-x-3 sm:space-x-4 text-lg sm:text-xl text-white">
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaInstagram />
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaLinkedin />
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-110">
-                        <FaEnvelope />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <HorizontalLine />
-
-        {/* Join Our Team Section */}
-        <div className="py-12 sm:py-16 lg:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div
-              ref={setSectionRef(3)}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center opacity-0"
-            >
-              <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 leading-tight">
-                  Join our team, The one with the master touch
-                </h2>
-              </div>
-              <div>
-                <p className="text-base sm:text-lg text-white mb-6 sm:mb-8 leading-relaxed">
-                  We believe it takes great people to make a great product.
-                  That's why we hire not only the perfect professional fits, but
-                  people who embody our company values.
-                </p>
-                <button className="inline-flex items-center bg-gray-900 text-white px-6 sm:px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
-                  See Open Position
-                  <svg
-                    className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    
         <Footer />
       </div>
     </div>

@@ -17,7 +17,7 @@ const ZovaqFooter: React.FC = () => {
       });
   
       if (response.ok) {
-        alert("Thank you for subscribing! We&apos;ll be in touch.");
+        alert("Thank you for subscribing! We'll be in touch.");
         setEmail("");
       } else {
         alert("There was an error subscribing. Try again later.");
