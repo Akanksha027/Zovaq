@@ -3,7 +3,6 @@ import React from "react";
 import {
   Search,
   Users,
-  Lightbulb,
   Megaphone,
   BarChart3,
   ArrowRight,
@@ -16,6 +15,7 @@ import {
 import CAT from "@/components/CAT";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 const HowItWorksPage = () => {
   const processSteps = [
     {
@@ -123,7 +123,7 @@ const HowItWorksPage = () => {
         {/* Right Side - SVG Image */}
         <div className="relative flex justify-center items-center">
           <div className="relative max-w-full flex items-center justify-center">
-            <img
+            <Image
               src="/service1.png"
               alt="Thumb up illustration"
               className="w-full h-auto object-contain"

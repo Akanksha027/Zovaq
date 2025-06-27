@@ -4,15 +4,11 @@ import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import React, { useState, useEffect, useRef } from "react";
 import Footer from "@/components/Footer";
-
+import Image from "next/image";
 import CAT from "@/components/CAT";
 import { TrendingUp, Lightbulb, Shield, Rocket } from "lucide-react";
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-}
+
 
 interface Reason {
   icon: React.ComponentType<{ className?: string }>;
@@ -103,26 +99,8 @@ const BrandAwarenessPage: React.FC = () => {
     };
   }, [statsInView, targetImpressions, targetBrandRecall, targetAudienceReach]);
 
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-  });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-  };
-
+ 
   const reasons: Reason[] = [
     {
       icon: TrendingUp,
@@ -232,7 +210,7 @@ const BrandAwarenessPage: React.FC = () => {
             </p>
           </div>
           <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0 px-4">
-            <img
+            <Image
               src="/marketing.jpg"
               alt="YT Pre Roll Video"
               className="w-full max-w-md md:max-w-full h-auto object-cover rounded-lg"
@@ -252,7 +230,7 @@ const BrandAwarenessPage: React.FC = () => {
                 from your competitors?
               </p>
               <div className="flex justify-center pt-8 sm:pt-12 md:pt-20">
-                <img
+                <Image
                   src="/brand-awareness.png"
                   alt="Team Brainstorming"
                   className="w-full max-w-md h-auto"
@@ -374,7 +352,7 @@ const BrandAwarenessPage: React.FC = () => {
               </ul>
             </div>
             <div className="w-full lg:w-1/2 max-w-lg px-4">
-              <img
+              <Image
                 src="/brand.png"
                 alt="Paid Media Expert"
                 className="w-full h-auto rounded-lg"

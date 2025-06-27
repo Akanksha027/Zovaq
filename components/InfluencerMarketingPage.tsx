@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-
+import Image from 'next/image';
 const InfluencerMarketingPage: React.FC = () => {
   const [activeStep, setActiveStep] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
@@ -101,13 +101,13 @@ const InfluencerMarketingPage: React.FC = () => {
                   {/* Influencer Image for Step 2 and 3 */}
                   {step.id === 2 && activeStep === 2 && (
                     <div className="relative w-80 h-60 rounded-2xl overflow-hidden bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-600 p-1">
-                      <img src="https://via.placeholder.com/320x240" alt="Crafting Campaigns" className="w-full h-full object-cover" />
+                      <Image src="https://via.placeholder.com/320x240" alt="Crafting Campaigns" className="w-full h-full object-cover" />
                     </div>
                   )}
 
                   {step.id === 3 && activeStep === 3 && (
                     <div className="relative w-80 h-60 rounded-2xl overflow-hidden bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-600 p-1">
-                      <img src="https://via.placeholder.com/320x240" alt="Achieving Success" className="w-full h-full object-cover" />
+                      <Image src="https://via.placeholder.com/320x240" alt="Achieving Success" className="w-full h-full object-cover" />
                     </div>
                   )}
                 </div>

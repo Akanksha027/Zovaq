@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-
+import Image from 'next/image';
 const AboutUsSection: React.FC = () => {
   return (
     <section className="relative text-white p-8 lg:p-16 overflow-hidden">
@@ -9,7 +9,7 @@ const AboutUsSection: React.FC = () => {
         {/* Top left plane */}
         
   {/* SVG Image in the top right corner */}
-  <img
+  <Image
         src="/plane2.svg"
         alt="Plane"
         className="absolute bottom-0 right-4 w-38 h-38"
@@ -77,17 +77,17 @@ const AboutUsSection: React.FC = () => {
             <div className="grid grid-cols-12 grid-rows-8 gap-4 h-96">
               {/* Top left image */}
               <div className="col-span-7 col-start-1 row-span-4 row-start-1 rounded-2xl overflow-hidden">
-                <img src="/i5.jpg" alt="Team Collaboration" className="w-full h-full object-cover" />
+                <Image src="/i5.jpg" alt="Team Collaboration" className="w-full h-full object-cover" />
               </div>
 
               {/* Top right image */}
               <div className="col-span-5 col-start-8 row-span-4 row-start-1 rounded-2xl overflow-hidden">
-                <img src="/i6.jpg" alt="Team Collaboration" className="w-full h-full object-cover" />
+                <Image src="/i6.jpg" alt="Team Collaboration" className="w-full h-full object-cover" />
               </div>
 
               {/* Bottom image */}
               <div className="col-span-12 col-start-1 row-span-4 row-start-5 rounded-2xl overflow-hidden">
-                <img src="/i7.jpg" alt="Innovation & Growth" className="w-full h-full object-cover" />
+                <Image src="/i7.jpg" alt="Innovation & Growth" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

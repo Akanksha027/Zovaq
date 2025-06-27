@@ -5,7 +5,6 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
 
-    
     if (data.userType === "Newsletter" && data.email) {
       const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -21,9 +20,13 @@ export async function POST(request: Request) {
         subject: "New Newsletter Subscription",
         text: `Email: ${data.email} has subscribed to the newsletter!`,
       };
+
       await transporter.sendMail(mailOptions);
 
-      return NextResponse.json({ message: "Subscription email sent successfully!" }, { status: 200 });
+      return NextResponse.json(
+        { message: "Subscription email sent successfully!" },
+        { status: 200 }
+      );
     }
 
     // Regular contact form handling
@@ -50,11 +53,19 @@ export async function POST(request: Request) {
         Message: ${message}
       `,
     };
+
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json({ message: "Email sent successfully!" }, { status: 200 });
-  } catch (error: any) {
+    return NextResponse.json(
+      { message: "Email sent successfully!" },
+      { status: 200 }
+    );
+  } catch (error: unknown) {
     console.error("Error sending email:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+
+    const message =
+      error instanceof Error ? error.message : "Something went wrong";
+
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

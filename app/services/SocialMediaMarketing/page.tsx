@@ -1,6 +1,7 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CAT from "@/components/CAT";
@@ -80,17 +81,17 @@ const SocialMediaPage: React.FC = () => {
 
             <div className="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed">
               <p>
-                Let's be real: Social media marketing isn't about just posting
-                pretty pictures and waiting for the likes to roll in. It's about
-                strategy, creativity, and — oh yeah — results. That's where we
+                Let&apos;s be real: Social media marketing isn&apos;t about just posting
+                pretty pictures and waiting for the likes to roll in. It&apos;s about
+                strategy, creativity, and — oh yeah — results. That&apos;s where we
                 come in.
               </p>
 
               <p>
-                We're AdLift. A social media marketing agency in India that
+                We&apos;re AdLift. A social media marketing agency in India that
                 blends strategy, creativity, and data to help your brand stand
-                out and grow. Whether you're a small business, a startup, or an
-                enterprise, we've got the tools, the know-how, and the passion
+                out and grow. Whether you&apos;re a small business, a startup, or an
+                enterprise, we&apos;ve got the tools, the know-how, and the passion
                 to make your social presence work harder than ever.
               </p>
             </div>
@@ -112,9 +113,11 @@ const SocialMediaPage: React.FC = () => {
           {/* Right Side - SVG Image */}
           <div className="relative flex justify-center items-center">
             <div className="relative max-w-full flex items-center justify-center">
-              <img
+              <Image
                 src="/thumb.svg"
                 alt="Thumb up illustration"
+                width={400}
+                height={400}
                 className="w-full h-auto object-contain"
               />
             </div>
@@ -148,9 +151,11 @@ const SocialMediaPage: React.FC = () => {
               <div key={index} className="relative">
                 <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-4 sm:p-6 h-full transition-all duration-300 hover:bg-gray-800/80 hover:border-gray-600 hover:transform hover:scale-105">
                   <div className="flex justify-center -mt-16 sm:-mt-20 mb-3">
-                    <img
+                    <Image
                       src={`/cartoon${index + 1}.svg`}
                       alt={`Cartoon ${index + 1}`}
+                      width={112}
+                      height={112}
                       className="w-20 h-20 sm:w-28 sm:h-28"
                     />
                   </div>
@@ -175,10 +180,10 @@ const SocialMediaPage: React.FC = () => {
               Social Media Marketing for Small Businesses and Enterprises
             </h2>
             <p className="text-base sm:text-lg mb-6">
-              Whether you're a neighborhood café or a national brand, our social
+              Whether you&apos;re a neighborhood café or a national brand, our social
               media marketing agency for small business and enterprise-level
               solutions are designed for your goals and your budget. And yes,
-              we're transparent about our social media marketing agency pricing
+              we&apos;re transparent about our social media marketing agency pricing
               — because surprises are for birthdays, not invoices.
             </p>
             <Link href='/Contact'>
@@ -190,9 +195,11 @@ const SocialMediaPage: React.FC = () => {
 
           {/* Image Section */}
           <div className="md:w-1/2 flex justify-end pr-4 sm:pr-10">
-            <img
+            <Image
               src="/social-media.jpg"
               alt="YT Shorts Video"
+              width={600}
+              height={400}
               className="w-full sm:w-4/5 h-auto object-cover"
             />
           </div>
@@ -204,9 +211,11 @@ const SocialMediaPage: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center">
             {/* Image Section */}
             <div className="lg:w-1/2 p-4">
-              <img
+              <Image
                 src="/trust.png"
                 alt="Social Media Illustration"
+                width={600}
+                height={400}
                 className="w-full h-auto rounded-lg"
               />
             </div>
@@ -224,10 +233,10 @@ const SocialMediaPage: React.FC = () => {
                   </span>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">
-                      We're Obsessed with Results
+                      We&apos;re Obsessed with Results
                     </h3>
                     <p className="text-gray-300">
-                      We're not here to rack up vanity metrics. As a top social
+                      We&apos;re not here to rack up vanity metrics. As a top social
                       media agency, we care about what actually grows your
                       business.
                     </p>
@@ -243,7 +252,7 @@ const SocialMediaPage: React.FC = () => {
                       Creative Meets Strategy
                     </h3>
                     <p className="text-gray-300">
-                      We're a creative social media agency that backs every idea
+                      We&apos;re a creative social media agency that backs every idea
                       with data.
                     </p>
                   </div>

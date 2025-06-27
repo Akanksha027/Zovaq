@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
-import { Search, Lightbulb, BarChart3, Target, Users, TrendingUp } from 'lucide-react';
+import { Lightbulb, BarChart3, Target, Users, TrendingUp } from 'lucide-react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Footer from '@/components/Footer';
-
+import Image
+ from 'next/image';
 interface FAQItem {
   id: number;
   question: string;
@@ -231,7 +232,7 @@ const InfluencerMarketingPage: React.FC = () => {
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
               {/* Image on the left */}
               <div className="lg:w-1/2 flex justify-center items-center opacity-0 translate-x-8 animate-fade-in-left delay-100">
-                <img
+                <Image
                   src="/faq.png"
                   alt="FAQ Illustration"
                   className="w-full max-w-md lg:max-w-none"
@@ -322,7 +323,7 @@ const InfluencerMarketingPage: React.FC = () => {
                 </p>
                 
                 <div className="inline-flex items-center bg-white text-red-600 px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold text-base sm:text-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
-                  Let's shape the future, together
+                  Let&apos;s shape the future, together
                   <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </div>
               </div>

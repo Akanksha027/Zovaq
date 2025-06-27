@@ -1,6 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
-import { Great_Vibes, Bebas_Neue } from 'next/font/google';
+
 
 
 

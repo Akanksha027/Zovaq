@@ -3,12 +3,12 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { InView } from "react-intersection-observer";
 import Link from "next/link";
-
+import Image from "next/image";
 const Main = () => {
   return (
     <div className=" text-white overflow-hidden  relative">
       {/* SVG Image in the top right corner */}
-      <img
+      <Image width={200} height={200}
         src="/plane.svg"
         alt="Plane"
         className="absolute top-4 right-4 w-20 h-20 sm:w-28 sm:h-28 md:w-48 md:h-48 lg:w-38 lg:h-38 animate-pulse"
@@ -146,7 +146,8 @@ const Main = () => {
                       transformOrigin: "center"
                     }}
                   >
-                    <img
+                    <Image
+                    width={200} height={200}
                       src={`/i${index + 2}.jpg`}
                       alt={`Influencer ${index + 1}`}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
