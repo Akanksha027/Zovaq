@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     city: '',
-    userType: "I'm a",
+    userType: "I&apos;m a",
     email: '',
     subject: '',
     number: '',
@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
       setFormData({
         fullName: "",
         city: "",
-        userType: "I'm a",
+        userType: "I&apos;m a",
         email: "",
         subject: "",
         number: "",
@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
                     onChange={handleInputChange}
                     className="w-full bg-transparent border-b-2 border-white/30 pb-3 pl-10 text-white focus:border-white focus:outline-none text-lg appearance-none cursor-pointer"
                   >
-                    <option value="I'm a" className="bg-black">I'm a</option>
+                    <option value="I&apos;m a" className="bg-black">I&apos;m a</option>
                     <option value="Business Owner" className="bg-black">Business Owner</option>
                     <option value="Marketing Manager" className="bg-black">Marketing Manager</option>
                     

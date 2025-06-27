@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Main = () => {
   return (
-    <div className=" text-white overflow-hidden relative">
+    <div className=" text-white overflow-hidden  relative">
       {/* SVG Image in the top right corner */}
       <img
         src="/plane.svg"
@@ -23,7 +23,7 @@ const Main = () => {
             {({ inView, ref }) => (
               <h1
                 ref={ref}
-                className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 transition-all duration-500 ease-out ${
+                className={`text-3xl font-sfpro sm:text-4xl lg:text-5xl xl:text-7xl font-bold leading-tight mb-6 transition-all duration-500 ease-out ${
                   inView
                     ? "opacity-100 translate-y-0 scale-100"
                     : "opacity-0 translate-y-8 scale-95"
@@ -40,7 +40,7 @@ const Main = () => {
             {({ inView, ref }) => (
               <p
                 ref={ref}
-                className={`text-gray-300 text-base sm:text-lg mb-6 leading-relaxed transition-all duration-500 ease-out delay-100 ${
+                className={`text-gray-300 lg:text-4xl xl:text-2xl text-base sm:text-lg mb-6 leading-relaxed transition-all duration-500 ease-out delay-100 ${
                   inView
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-6"
@@ -68,10 +68,12 @@ const Main = () => {
                     Get started
                   </button>
                 </Link>
+                <Link href="/HowItWorks">
                 <button className="border border-gray-600 hover:border-gray-400 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-lg group">
                   See how it works 
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
+                </Link>
               </div>
             )}
           </InView>
@@ -113,7 +115,7 @@ const Main = () => {
                     }`}
                     style={{ animationDelay: `${500 + index * 100}ms` }}
                   >
-                    <div className="text-2xl sm:text-3xl font-bold text-orange-500">
+                    <div className="text-4xl sm:text-2xl lg:text-5xl  font-bold text-orange-500">
                       {stat.number}
                     </div>
                     <div className="text-gray-400">{stat.label}</div>

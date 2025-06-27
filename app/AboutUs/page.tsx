@@ -54,7 +54,7 @@ const BeliefCard: React.FC<BeliefCardProps> = ({
       observer.observe(cardRef.current);
     }
 
-    // Fallback: show cards after 2 seconds if intersection observer doesn't work
+    // Fallback: show cards after 2 seconds if intersection observer doesn&apos;t work
     const fallbackTimer = setTimeout(() => {
       setIsVisible(true);
     }, 2000);
@@ -146,7 +146,7 @@ const WhatWeBelieveIn: React.FC = () => {
       imageAlt: "Modern workspace with laptop and coffee",
       title: "Innovation Through Technology",
       description:
-        "Over the years at ZOVAQ, we've put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and drive our passion for connecting brands with authentic voices in the digital landscape.",
+        "Over the years at ZOVAQ, we&apos;ve put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and drive our passion for connecting brands with authentic voices in the digital landscape.",
       index: 0,
     },
     {
@@ -162,7 +162,7 @@ const WhatWeBelieveIn: React.FC = () => {
       imageAlt: "Creative professional working in modern office",
       title: "Authentic Storytelling",
       description:
-        "At our core, we understand that every brand has a unique story to tell. We're dedicated to helping you find the right voice, the right audience, and the right moment to share your message in a way that resonates and creates lasting impact.",
+        "At our core, we understand that every brand has a unique story to tell. We&apos;re dedicated to helping you find the right voice, the right audience, and the right moment to share your message in a way that resonates and creates lasting impact.",
       index: 2,
     },
   ];
@@ -246,7 +246,7 @@ const WhatWeBelieveIn: React.FC = () => {
                 voice and influencers build long‑lasting connections with their
                 audience. We believe in the power of authentic marketing —
                 making sure every campaign is tailored, every partnership is
-                genuine, and every result delivers value. Together, we're
+                genuine, and every result delivers value. Together, we&apos;re
                 shaping the future of digital influence, one collaboration at a
                 time.
               </p>
@@ -266,7 +266,7 @@ const WhatWeBelieveIn: React.FC = () => {
               What we believe in
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-white max-w-3xl mx-auto">
-              Over the years at ZOVAQ, we've put a lot of thought into what it
+              Over the years at ZOVAQ, we&apos;ve put a lot of thought into what it
               is that makes us who we are. The qualities that unite us, that
               make us such an effective team, and drive our success.
             </p>
@@ -455,7 +455,7 @@ const WhatWeBelieveIn: React.FC = () => {
               <div>
                 <p className="text-base sm:text-lg text-white mb-6 sm:mb-8 leading-relaxed">
                   We believe it takes great people to make a great product.
-                  That's why we hire not only the perfect professional fits, but
+                  That&apos;s why we hire not only the perfect professional fits, but
                   people who embody our company values.
                 </p>
                 <button className="inline-flex items-center bg-gray-900 text-white px-6 sm:px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">

@@ -1,13 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
-import { Great_Vibes } from 'next/font/google';
-import Image from 'next/image';
 
-// Load the Great Vibes font
-const greatVibes = Great_Vibes({
-  weight: '400',
-  subsets: ['latin'],
-});
+import React, { useEffect, useRef, useState } from 'react';
 
 const ScrollRevealText: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -47,12 +40,6 @@ const ScrollRevealText: React.FC = () => {
     };
   }, []);
 
-  const profileImages = [
-    "/i2.jpg",
-    "/i3.jpg",
-    "/i4.jpg"
-  ];
-
   const getTextStyle = (triggerPoint: number, delay: number = 0) => {
     const adjustedProgress = Math.max(0, scrollProgress - delay);
     const elementProgress = Math.min(adjustedProgress * 4, 1);
@@ -69,80 +56,54 @@ const ScrollRevealText: React.FC = () => {
     };
   };
 
-  const getImageStyle = (triggerPoint: number, delay: number = 0) => {
-    const adjustedProgress = Math.max(0, scrollProgress - delay);
-    const elementProgress = Math.min(adjustedProgress * 4, 1);
-
-    return {
-      transform: `translateY(${(1 - elementProgress) * 30}px) scale(${0.9 + (elementProgress * 0.1)})`,
-      opacity: 0.4 + (elementProgress * 0.6),
-      filter: `brightness(${0.5 + (elementProgress * 0.7)}) contrast(${0.8 + (elementProgress * 0.4)})`,
-      boxShadow: elementProgress > 0.3
-        ? `0 15px 40px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.1)`
-        : '0 5px 20px rgba(0,0,0,0.2)',
-      transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-    };
-  };
-
   return (
-    <div className=" bg-black text-white overflow-hidden">
+    <div className="bg-black text-white overflow-hidden">
       <div className="flex items-center justify-center"></div>
 
-      <div ref={containerRef} className="min-h-screen flex items-center justify-center px-4 py-10 md:py-20">
+      <div ref={containerRef} className=" flex items-center justify-center px-4 py-10 md:py-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="space-y-4 md:space-y-6 lg:space-y-8">
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.02, 0)}>FROM</span>
-          
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.04, 0.02)}>EMERGING</span>
-           
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.02, 0)}>FROM</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.04, 0.02)}>EMERGING</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.08, 0.04)}>CREATORS</span>
-             
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.12, 0.06)}>TO</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.08, 0.04)}>CREATORS</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.12, 0.06)}>TO</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.16, 0.08)}> TRUSTED</span>
-          
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.20, 0.10)}>INFLUENCERS</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.16, 0.08)}>TRUSTED</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.20, 0.10)}>INFLUENCERS</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.24, 0.12)}>WE</span>
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.28, 0.14)}>PARTNER </span>
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.32, 0.16)}>WITH </span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.24, 0.12)}>WE</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.28, 0.14)}>PARTNER</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.32, 0.16)}>WITH</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.36, 0.18)}>THE</span>
-              <span className={`text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight italic decoration-white/40 ${greatVibes.className}`} style={{ ...getTextStyle(0.40, 0.20), backgroundClip: 'text' }}>RIGHT</span>
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.44, 0.22)}>VOICES </span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.36, 0.18)}>THE</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight italic" style={getTextStyle(0.40, 0.20)}>RIGHT</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.44, 0.22)}>VOICES</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.46, 0.24)}>TO </span>
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.48, 0.26)}>HELP </span>
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.50, 0.28)}>YOUR</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.46, 0.24)}>TO</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.48, 0.26)}>HELP</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.50, 0.28)}>YOUR</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 lg:gap-4">
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.52, 0.30)}>BRAND </span>
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.52, 0.30)}>GROW</span>
-              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-black tracking-tight" style={getTextStyle(0.54, 0.30)}>.</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.52, 0.30)}>BRAND</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.52, 0.30)}>GROW</span>
+              <span className="text-2xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-tight" style={getTextStyle(0.54, 0.30)}>.</span>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes shimmer {
-          0% { background-position: -200% 0; }
-          100% { background-position: 200% 0; }
-        }
-      `}</style>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 import { ArrowRight } from "lucide-react";
-
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CAT from "@/components/CAT";
@@ -40,7 +40,7 @@ const SocialMediaPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className=" bg-black relative overflow-hidden">
       {/* Background Grid Overlay */}
       <div
   className="absolute inset-0"
@@ -64,7 +64,7 @@ const SocialMediaPage: React.FC = () => {
 />
  <div className="relative z-10">
       <Navbar />
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 flex items-center min-h-screen">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 flex items-center ">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center w-full">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 lg:ml-4">
@@ -96,16 +96,16 @@ const SocialMediaPage: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-6">
+              <Link  href="/Contact">
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 transition-all duration-300 transform hover:scale-105">
                 Start Growing Now
                 <div className="bg-orange-600 p-1 sm:p-2 rounded-full">
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
               </button>
+              </Link>
 
-              <button className="bg-white text-gray-800 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300">
-                GET IN TOUCH
-              </button>
+              
             </div>
           </div>
 
@@ -181,9 +181,11 @@ const SocialMediaPage: React.FC = () => {
               we're transparent about our social media marketing agency pricing
               — because surprises are for birthdays, not invoices.
             </p>
+            <Link href='/Contact'>
             <button className="text-white text-base sm:text-xl bg-orange-500 rounded-2xl px-3 sm:px-4 py-3 sm:py-4">
               Start Growing Now <span>&rarr;</span>
             </button>
+            </Link>
           </div>
 
           {/* Image Section */}

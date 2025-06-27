@@ -5,7 +5,7 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
 
-    // Check if it's a newsletter subscription
+    
     if (data.userType === "Newsletter" && data.email) {
       const transporter = nodemailer.createTransport({
         service: "gmail",
