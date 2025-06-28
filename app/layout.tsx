@@ -1,12 +1,8 @@
-
 import "./globals.css";
 
-
-
-
 export const metadata = {
-  title: 'ZOVAQ',
-  description: 'Influencer Marketing Agency',
+  title: 'ZOVAQ | Influencer Marketing Agency in India',
+  description: 'ZOVAQ is a leading influencer marketing agency helping brands connect with top influencers to grow online.',
 };
 
 export default function RootLayout({
@@ -17,7 +13,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="antialiased" style={{ fontFamily: 'SF Pro Compressed Thin, sans-serif' }}
+        className="antialiased"
+        style={{ fontFamily: 'SF Pro Compressed Thin, sans-serif' }}
       >
         {children}
       </body>
