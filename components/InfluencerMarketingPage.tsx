@@ -13,7 +13,7 @@ const InfluencerMarketingPage: React.FC = () => {
     {
       id: 1,
       title: "Selecting the Right Influencers",
-      content: "Just give us a call on +919899537363 OR reach out through our contact form, and our influencer marketing experts will discuss your requirements within 1-2 hours. Together, we'll explore your brand's goals and what exactly you want to achieve with our influencer marketing services to align with your vision. Our approach involves a careful selection of platforms and influencers in marketing, ensuring customized influencer marketing campaigns are perfectly aligned with your goals for unparalleled engagement and better ROI."
+      content: "Just give us a call on +919810433989 OR reach out through our contact form, and our influencer marketing experts will discuss your requirements within 1-2 hours. Together, we'll explore your brand's goals and what exactly you want to achieve with our influencer marketing services to align with your vision. Our approach involves a careful selection of platforms and influencers in marketing, ensuring customized influencer marketing campaigns are perfectly aligned with your goals for unparalleled engagement and better ROI."
     },
     {
       id: 2,
