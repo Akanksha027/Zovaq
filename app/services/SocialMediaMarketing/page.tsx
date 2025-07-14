@@ -88,7 +88,7 @@ const SocialMediaPage: React.FC = () => {
               </p>
 
               <p>
-                We&apos;re AdLift. A social media marketing agency in India that
+                We&apos;re ZOVAQ. A social media marketing agency in India that
                 blends strategy, creativity, and data to help your brand stand
                 out and grow. Whether you&apos;re a small business, a startup, or an
                 enterprise, we&apos;ve got the tools, the know-how, and the passion

@@ -117,7 +117,7 @@ const InfluencerMarketingPage: React.FC = () => {
               </h1>
               
               <p className="text-base sm:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                AdLift delivers credible influencer marketing services with data-driven
+            ZOVAQ delivers credible influencer marketing services with data-driven
                 campaigns that are viral, captivating, and ROI-focused.
               </p>
               
